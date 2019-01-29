@@ -1,32 +1,21 @@
-<!--
-	Ajax get method example
-	there are three files for this example 
-	1.index.html file for html
-	2.index.js file for sending data to server using ajax
-	3.action.php file for server side operations
--->
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ajax Get Method</title>
+		<title>Ajax Post Method</title>
 		<meta charset="utf-8">
-		<script src="index.js"></script>
+		<script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
-		
-		<!--
-			Creating simple html form for sending the data to the server
-			Here we are using the GET method to send the data to the server
-			when the user clicks on the button the data will be send to the server
-			we use id's for references and name's for getting the data in the server
-				side nothing but $_GET['name'] etc
-		-->
-		<form method="GET" id="form">
-			Name<input type="text" name="name" id="name">
-			</br>
-			Email<input type="email" name="email" id="email">
-			</br>
-			<input type="button" value="send" id="submit">
+		<form method="POST">
+			Name <input type="text" name="name" id="name" required><br/>
+			Email <input type="email" name="email" id="email" required><br/>
+			Image <input type="file" name="image" id="image" required><br/>
+			<input type="button" value="Send" id="send">
 		</form>
 	</body>
 </html>
+
+<!--
+	The above code is same as the code in the get method except we are sending a file here
+	When we click the send button it will send a post request
+-->
